@@ -3,7 +3,7 @@
 [Qinsheng Zhang](https://qsh-zh.github.io/), [Molei Tao](https://mtao8.math.gatech.edu/), [Yongxin Chen](https://yongxin.ae.gatech.edu/)
 
 We unbox the accelerating secret of DDIMs based on Dirac approximation and generalize it to general diffusion models. When
-applied to the critically-damped Langevin diffusion model, it achieves an FID score of 2.28 on CIFAR10 with 50 steps.
+applied to the critically-damped Langevin diffusion model, it achieves an FID score of 2.26 on CIFAR10 with 50 steps.
 
 ![gDDIM](assets/fig1.png) 
 ![dirac](assets/fig2.png)
@@ -16,6 +16,14 @@ applied to the critically-damped Langevin diffusion model, it achieves an FID sc
 
 # Reproduce results
 
+## CLD
+
+Download the [checkpoint]() and evaluate FID
+> the checkpoint has 2.2565 FID in my machine with 50 NFE
+
+```shell
+# todo
+```
 
 # Reference
 
