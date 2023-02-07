@@ -38,11 +38,27 @@ Download the [checkpoint]() and evaluate FID
 }
 ```
 
+Related works
+
 ```tex
+@inproceedings{song2020denoising,
+  title={Denoising diffusion implicit models},
+  author={Song, Jiaming and Meng, Chenlin and Ermon, Stefano},
+  booktitle={International Conference on Learning Representations (ICLR)},
+  year={2021}
+}
+
 @inproceedings{dockhorn2022score,
     title={Score-Based Generative Modeling with Critically-Damped Langevin Diffusion},
     author={Tim Dockhorn and Arash Vahdat and Karsten Kreis},
     booktitle={International Conference on Learning Representations (ICLR)},
     year={2022}
+}
+
+@article{hoogeboom2022blurring,
+  title={Blurring diffusion models},
+  author={Hoogeboom, Emiel and Salimans, Tim},
+  journal={arXiv preprint arXiv:2209.05557},
+  year={2022}
 }
 ```
