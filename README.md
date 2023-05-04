@@ -1,9 +1,18 @@
-# gDDIM: Generalized denoising diffusion implicit models
 
-[Qinsheng Zhang](https://qsh-zh.github.io/), [Molei Tao](https://mtao8.math.gatech.edu/), [Yongxin Chen](https://yongxin.ae.gatech.edu/)
+# <p align="center">gDDIM: Generalized denoising diffusion implicit models</p>
 
-We unbox the accelerating secret of DDIMs based on Dirac approximation and generalize it to general diffusion models. When
-applied to the critically-damped Langevin diffusion model, it achieves an FID score of 2.26 on CIFAR10 with 50 steps.
+<div align="center">
+  <a href="https://qsh-zh.github.io/" target="_blank">Qinsheng&nbsp;Zhang</a> &emsp; <b>&middot;</b> &emsp;
+  <a href="https://mtao8.math.gatech.edu/" target="_blank">Molei&nbsp;Tao</a> &emsp; <b>&middot;</b> &emsp;
+  <a href="https://yongxin.ae.gatech.edu/" target="_blank">Yongxin&nbsp;Chen</a>
+  <br> <br>
+  <a href="https://arxiv.org/abs/2206.05564" target="_blank">Paper</a> &emsp;
+</div>
+<br><br>
+
+**TLDR**: We unbox the accelerating secret of DDIMs based on Dirac approximation and generalize it to general diffusion models, isotropic and non-isotropic. 
+
+<!-- When applied to the critically-damped Langevin diffusion model, it achieves an FID score of 2.26 on CIFAR10 with 50 steps. -->
 
 ![gDDIM](assets/fig1.png) 
 ![dirac](assets/fig2.png)
