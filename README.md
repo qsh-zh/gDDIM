@@ -28,12 +28,12 @@ The codebase is only tested in docker environment.
 
 # Reproduce results
 
-## CLD
+## gDDIM on CLD
 
 ### Training on cifar10
 
 ```shell
-cd ${gDDIM_PROJECT_FOLDER}
+cd ${gDDIM_PROJECT_FOLDER}/cld_jax
 wandb login ${WANDB_KEY}
 python main.py --config configs/accr_dcifar10_config.py --mode train --workdir logs/accr_dcifar_nomixed --wandb --config.seed=8
 ```
@@ -42,19 +42,37 @@ python main.py --config configs/accr_dcifar10_config.py --mode train --workdir l
 
 ### Eval on cifar10
 
-1. Download [CIFAR stats](https://drive.google.com/file/d/1gw8sTGUUf4aZG4sNmwMj9rjmTfNv4eed/view?usp=sharing) to `assets/stats/`.
+1. Download [CIFAR stats](https://drive.google.com/file/d/1gw8sTGUUf4aZG4sNmwMj9rjmTfNv4eed/view?usp=sharing) to `${gDDIM_PROJECT_FOLDER}/cld_jax/assets/stats/`.
 
 2. We provide pretrain model [checkpoint](https://drive.google.com/file/d/1Wi9xOVJS03KDzD3eFpC1whHrzxf7P1cy/view?usp=sharing).
 > the checkpoint has 2.2565 FID in my machine with 50 NFE
 3. User can evaluate FID via
 ```shell
-cd ${gDDIM_PROJECT_FOLDER}
+cd ${gDDIM_PROJECT_FOLDER}/cld_jax
 python main.py --config configs/accr_dcifar10_config.py --mode check --result_folder logs/fid --ckpt ${CLD_BEST_PATH} --config.sampling.deis_order=2 --config.sampling.nfe=50
 ```
 
 ## Blur diffusion model
 
-Please check out [blur branch](https://github.com/qsh-zh/gDDIM/tree/clean).
+### Training on cifar10
+
+```shell
+cd ${gDDIM_PROJECT_FOLDER}/blur_jax
+wandb login ${WANDB_KEY}
+python main.py --config configs/ddpm_deep_cifar10_config.py --mode train --workdir logs/ddpm_deep_sigma${sigma}_seed${seed} --wandb --config.model.sigma_blur_max=${sigma} --config.seed=${seed}"
+```
+
+### Eval on cifar10
+
+1. Download [CIFAR stats](https://drive.google.com/file/d/1gw8sTGUUf4aZG4sNmwMj9rjmTfNv4eed/view?usp=sharing) to `${gDDIM_PROJECT_FOLDER}/blur_jax/assets/stats/`.
+
+2. We provide pretrain model [checkpoint](https://drive.google.com/file/d/1dfgLCyXqyA6e6JMOHZo-LqaklE8BNG5Z/view?usp=sharing).
+
+3. User can evaluate FID via
+```shell
+cd ${gDDIM_PROJECT_FOLDER}/blur_jax
+python main.py --config configs/accr_dcifar10_config.py --mode check --result_folder logs/fid --ckpt ${CLD_BEST_PATH} --config.sampling.deis_order=2 --config.sampling.nfe=50
+```
 
 # Reference
 
