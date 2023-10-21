@@ -91,6 +91,6 @@ Related works
 ```
 
 
-## MISC
+## Miscellaneous
 
-The project is built upon [score-sde](https://github.com/yang-song/score_sde) developed by [Yang Song].
+The project is built upon [score-sde](https://github.com/yang-song/score_sde) developed by [Yang Song](https://yang-song.net/). Additionally, the sampling code has been adopted from [DEIS](https://github.com/qsh-zh/deis).
