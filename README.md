@@ -42,9 +42,11 @@ python main.py --config configs/accr_dcifar10_config.py --mode train --workdir l
 
 ### Eval on cifar10
 
-Download the [checkpoint](https://drive.google.com/file/d/1Wi9xOVJS03KDzD3eFpC1whHrzxf7P1cy/view?usp=sharing) and evaluate FID
-> the checkpoint has 2.2565 FID in my machine with 50 NFE
+1. Download [CIFAR stats](https://drive.google.com/file/d/1gw8sTGUUf4aZG4sNmwMj9rjmTfNv4eed/view?usp=sharing) to `assets/stats/`.
 
+2. We provide pretrain model [checkpoint](https://drive.google.com/file/d/1Wi9xOVJS03KDzD3eFpC1whHrzxf7P1cy/view?usp=sharing).
+> the checkpoint has 2.2565 FID in my machine with 50 NFE
+3. User can evaluate FID via
 ```shell
 cd ${gDDIM_PROJECT_FOLDER}
 python main.py --config configs/accr_dcifar10_config.py --mode check --result_folder logs/fid --ckpt ${CLD_BEST_PATH} --config.sampling.deis_order=2 --config.sampling.nfe=50
@@ -87,3 +89,8 @@ Related works
   year={2022}
 }
 ```
+
+
+## MISC
+
+The project is built upon [score-sde](https://github.com/yang-song/score_sde) developed by [Yang Song].
