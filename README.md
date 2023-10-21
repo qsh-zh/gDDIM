@@ -52,6 +52,10 @@ cd ${gDDIM_PROJECT_FOLDER}
 python main.py --config configs/accr_dcifar10_config.py --mode check --result_folder logs/fid --ckpt ${CLD_BEST_PATH} --config.sampling.deis_order=2 --config.sampling.nfe=50
 ```
 
+## Blur diffusion model
+
+Please check out [blur branch](https://github.com/qsh-zh/gDDIM/tree/clean).
+
 # Reference
 
 ```tex
